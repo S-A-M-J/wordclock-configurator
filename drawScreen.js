@@ -7,7 +7,6 @@ function drawScreen() {
   if (isConnected) {
     //text('Bluetooth Connected :)', 10, 140);
     if (newData) {
-      image(trigBoardImg, 144, 160);
       noStroke();
       if (millis()-LEDblinkStartTime < 200) {
         fill(71, 134, 222, 150);//LED flasher
