@@ -64,16 +64,9 @@ function showAllParam() {
   highSpeedEnableCheckbox.show();
   highSpeedEnableButton.show();
 
-  batteryOffsetTitle.show();
-  batteryOffsetInput.show();
-  batteryOffsetButton.show();
-
   clockTimerEnableTitle.show();
   clockTimerEnableCheckbox.show();
   clockTimerEnableButton.show();
-  telegramEnableTitle.show();
-  telegramEnableCheckbox.show();
-  telegramEnableButton.show();
 
   appendRSSIenableTitle.show();
   appendRSSIenableCheckbox.show();
