@@ -4,7 +4,6 @@ function drawScreen() {
   textAlign(LEFT, TOP);
   background(255);
   fill(0);
-  image(trigBoardlogoImg, 0, 0);
   if (isConnected) {
     //text('Bluetooth Connected :)', 10, 140);
     if (newData) {
