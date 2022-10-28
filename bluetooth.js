@@ -45,17 +45,11 @@ function gotValue(value) {
   let splitString = split(value, ',');
   if (splitString[0]=='stat') {//status string
     newData=true;
-    if (OTAisActive) {
-      OTAisActive = false;
-      //OTAinProgress=" ";
-      showAllParam();
-    }
     if (splitString[1]=='co') {
       wifiConnected=true;
     } else {
       wifiConnected=false;
     }
-    batteryVoltage = splitString[2];
     if (splitString[3]=='op') {
       contactOpen=true;
     } else {
@@ -184,12 +178,6 @@ function gotValue(value) {
   if (splitString[0]=='tsc') {//still closed
     timerStillClosedInput.value(splitString[1]);
   }  
-  if (splitString[0]=='lob') {//voltage
-    loBatteryInput.value(splitString[1]);
-  }
-  if (splitString[0]=='bof') {//battery offset
-    batteryOffsetInput.value(splitString[1]);
-  } 
 
 
 
@@ -396,13 +384,6 @@ function gotValue(value) {
 
   if (splitString[0]=='missionTimeafter') {//mission critical time
     missionCriticalTimeInput.value(splitString[1]);
-  }
-
-
-  if (splitString[0]=='OTAprog') {//OTA IS IN PROGRESS
-    OTAinProgress=splitString[1];
-    OTAisActive = true;
-    hideAllParam();
   }
 }
 
