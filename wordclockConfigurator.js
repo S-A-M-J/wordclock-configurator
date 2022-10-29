@@ -64,7 +64,7 @@ function setup() {
   WiFiButton.mousePressed(saveWiFi);
   //**************************************
   wifiTimeoutTitle = createElement('h4', 'WiFi Timeout (seconds 1-60)');
-  wifiTimeoutTitle.position(10, staticSecondaryDNSTitle.size().height+WiFiButton.y+5);
+  wifiTimeoutTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
   wifiTimeoutInput = createInput('');
   wifiTimeoutInput.size(30);
   wifiTimeoutInput.position(wifiTimeoutTitle.size().width+wifiTimeoutTitle.x+10, wifiTimeoutTitle.size().height+wifiTimeoutTitle.y);  
@@ -81,7 +81,7 @@ function setup() {
   wordclockNameButton.mousePressed(wordclockNameCommand);
   //**************************************
   highSpeedEnableTitle = createElement('h4', 'High Speed Trigger: ');
-  highSpeedEnableTitle.position(10, trigTriggerSelectionTitle.size().height+trigTriggerSelectionTitle.y+5);
+  highSpeedEnableTitle.position(10, wordclockNameTitle.size().height+wordclockNameTitle.y+5);
   highSpeedEnableCheckbox = createCheckbox('', false);
   highSpeedEnableCheckbox.position(highSpeedEnableTitle.size().width+highSpeedEnableTitle.x+10, highSpeedEnableTitle.size().height+highSpeedEnableTitle.y);
   highSpeedEnableButton = createButton('Save');
@@ -89,7 +89,7 @@ function setup() {
   highSpeedEnableButton.mousePressed(highSpeedCommand);
   //**************************************
   timerUnitTitle = createElement('h4', 'Timer Units: ');
-  timerUnitTitle.position(10, wakeButtonTitle.size().height+wakeButtonTitle.y+5);
+  timerUnitTitle.position(10, highSpeedEnableTitle.size().height+highSpeedEnableTitle.y+5);
   timerUnitSelector = createSelect();
   timerUnitSelector.position(timerUnitTitle.x+timerUnitTitle.size().width+10, timerUnitTitle.size().height+timerUnitTitle.y);
   timerUnitSelector.option('Minutes');
