@@ -70,6 +70,11 @@ function hideAllParam() {
   timerStillClosedTitle.hide();
   timerStillClosedInput.hide();
   timerStillClosedButton.hide();
+
+  timerUnitTitle.hide();
+  timerUnitSelector.hide();
+  timerUnitSelectorButton.hide();
+
   wifiTimeoutTitle.hide();
   wifiTimeoutInput.hide();
   wifiTimeoutButton.hide();
