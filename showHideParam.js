@@ -9,14 +9,7 @@ function showAllParam() {
   wifiTimeoutButton.show();
   wordclockNameTitle.show();
   wordclockNameInput.show();
-  triggerSelector.show();
-  triggerSelectorButton.show();
-  triggerOpensTitle.show();
-  triggerOpensInput.show();
-  triggerOpensButton.show();
-  triggerClosesTitle.show();
-  triggerClosesInput.show();
-  triggerClosesButton.show();
+
   timerTitle.show();
   timerInput.show();
   timerButton.show();
@@ -29,34 +22,10 @@ function showAllParam() {
   timerStillClosedTitle.show();
   timerStillClosedInput.show();
   timerStillClosedButton.show();
-  
-  pushCredentTitle.show();
-  pushuserTitle.show();
-  pushuserInput.show();
-  pushapiTitle.show();
-  pushapiInput.show();
-  pushOverSaveButton.show();
-  pushOverTestButton.hide();
-
   wifiTimeoutTitle.show();
   wifiTimeoutInput.show();
   wifiTimeoutButton.show();
-  trigTriggerSelectionTitle.show();
-  trigBoardNameButton.show();
-  wakeButtonTitle.show();
-  wakeButtonInput.show();
-  wakeButtonButton.show();
   killButton.show();
-  pushOverEnableTitle.show();
-  pushOverEnableCheckbox.show();
-  pushOverEnableButton.show();
-  pushSaferEnableTitle.show();
-  pushSaferEnableCheckbox.show();
-  pushSaferEnableButton.show();
-  pushSaferTitle.show();
-  pushSaferKeyTitle.show();
-  pushSaferInput.show();
-  pushSaferSaveButton.show();
 
   timerUnitTitle.show();
   timerUnitSelector.show();
@@ -89,14 +58,6 @@ function hideAllParam() {
   WiFiButton.hide();
   wordclockNameTitle.hide();
   wordclockNameInput.hide();
-  triggerSelector.hide();
-  triggerSelectorButton.hide();
-  triggerOpensTitle.hide();
-  triggerOpensInput.hide();
-  triggerOpensButton.hide();
-  triggerClosesTitle.hide();
-  triggerClosesInput.hide();
-  triggerClosesButton.hide();
   timerTitle.hide();
   timerInput.hide();
   timerButton.hide();
@@ -109,33 +70,11 @@ function hideAllParam() {
   timerStillClosedTitle.hide();
   timerStillClosedInput.hide();
   timerStillClosedButton.hide();
-  pushCredentTitle.hide();
-  pushuserTitle.hide();
-  pushuserInput.hide();
-  pushapiTitle.hide();
-  pushapiInput.hide();
-  pushOverSaveButton.hide();
-  pushOverTestButton.hide();
   wifiTimeoutTitle.hide();
   wifiTimeoutInput.hide();
   wifiTimeoutButton.hide();
-  trigTriggerSelectionTitle.hide();
   wordclockNameButton.hide();
-  wakeButtonTitle.hide();
-  wakeButtonInput.hide();
-  wakeButtonButton.hide();
   killButton.hide();
-  pushOverEnableTitle.hide();
-  pushOverEnableCheckbox.hide();
-  pushOverEnableButton.hide();
-
-  pushSaferEnableTitle.hide();
-  pushSaferEnableCheckbox.hide();
-  pushSaferEnableButton.hide();
-  pushSaferTitle.hide();
-  pushSaferKeyTitle.hide();
-  pushSaferInput.hide();
-  pushSaferSaveButton.hide();
 
   highSpeedEnableTitle.hide();
   highSpeedEnableCheckbox.hide();

@@ -199,26 +199,6 @@ function wordclockNameCommand() {
   sendData("#name,"+wordclockNameInput.value());
 }
 
-function triggerSelectorCommand() {
-  sendData("#sel,"+triggerSelector.value());
-}
-
-function triggerOpensCommand() {
-  let sanitizer = checkUserString(triggerOpensInput.value(), 50);
-  if (sanitizer!=null) {
-    triggerOpensInput.value(sanitizer);
-    return;
-  }
-  sendData("#ope,"+triggerOpensInput.value());
-}
-function triggerClosesCommand() {
-  let sanitizer = checkUserString(triggerClosesInput.value(), 50);
-  if (sanitizer!=null) {
-    triggerClosesInput.value(sanitizer);
-    return;
-  }
-  sendData("#clo,"+triggerClosesInput.value());
-}
 function timerCommand() {
   let sanitizer = checkUserString(timerInput.value(), 4);
   if (sanitizer!=null) {
@@ -256,52 +236,9 @@ function timerStillClosedCommand() {
   sendData("#tsc,"+timerStillClosedInput.value());
 }
 
-function pushOverSaveCommand() {
-  let sanitizer = checkUserString(pushuserInput.value(), 50);
-  if (sanitizer!=null) {
-    pushuserInput.value("");
-    return;
-  }
-  sanitizer = checkUserString(pushapiInput.value(), 50);
-  if (sanitizer!=null) {
-    pushapiInput.value("");
-    return;
-  }
-  sendData("#pov,"+pushuserInput.value() +","+pushapiInput.value());
-}
-function pushOverTestCommand() {
-  sendData("#pot");
-}
-
 function killCommand() {
   sendData("#kill,");
 }
-
-function pushOverEnableCommand() {
-  if (pushOverEnableCheckbox.checked()) {
-    sendData("#poe");
-  } else {
-    sendData("#pod");
-  }
-}
-
-function pushSaferEnableCommand() {
-  if (pushSaferEnableCheckbox.checked()) {
-    sendData("#pse");
-  } else {
-    sendData("#psd");
-  }
-}
-
-function pushSaferKeySaveCommand() {
-  let sanitizer = checkUserString(pushSaferInput.value(), 50);
-  if (sanitizer!=null) {
-    pushSaferInput.value("");
-    return;
-  }
-  sendData("#psk,"+pushSaferInput.value());
-}
-
 
 function highSpeedCommand() {
   if (highSpeedEnableCheckbox.checked()) {

@@ -16,12 +16,6 @@ function drawScreen() {
         LEDblinkStartTime=millis();
       }
 
-      if (OTAisActive) {
-        fill(255, 0, 0);
-        text("OTA: "+OTAinProgress, 15, 200);
-      }
-
-
       fill(0);
 
       textAlign(CENTER, TOP);
