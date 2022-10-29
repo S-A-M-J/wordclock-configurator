@@ -55,7 +55,7 @@ function setup() {
   ////binFileInput = createFileInput(handleFile);
   ////binFileInput.position(380, 320);
 
-  let yPositionStart = 600;
+  let yPositionStart = 300;
   ssidTitle = createElement('h3', 'WiFi SSID (2.4GHz)');
   ssidTitle.position(10, yPositionStart);
   ssidInput = createInput('');
