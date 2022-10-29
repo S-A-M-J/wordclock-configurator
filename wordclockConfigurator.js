@@ -64,7 +64,7 @@ function setup() {
   WiFiButton.mousePressed(saveWiFi);
   //**************************************
   wifiTimeoutTitle = createElement('h4', 'WiFi Timeout (seconds 1-60)');
-  wifiTimeoutTitle.position(10, staticSecondaryDNSTitle.size().height+staticSecondaryDNSTitle.y+5);
+  wifiTimeoutTitle.position(10, staticSecondaryDNSTitle.size().height+WiFiButton.y+5);
   wifiTimeoutInput = createInput('');
   wifiTimeoutInput.size(30);
   wifiTimeoutInput.position(wifiTimeoutTitle.size().width+wifiTimeoutTitle.x+10, wifiTimeoutTitle.size().height+wifiTimeoutTitle.y);  
