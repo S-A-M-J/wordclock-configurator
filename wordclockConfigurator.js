@@ -7,6 +7,7 @@ let isConnected = false;
 let connectButton;
 
 let wordclocklogoImg;
+let testImg;
 //status variables
 let newData=false;
 let wifiConnected = false;
@@ -23,6 +24,7 @@ let tcpEnabled = false;
 
 function preload() {
   wordclocklogoImg = loadImage('data/wordclockConfLogo.png');
+  testImg = loadImage('data/trigBoardLogo.png');
 }
 
 function setup() {
