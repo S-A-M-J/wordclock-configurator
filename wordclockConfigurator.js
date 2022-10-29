@@ -23,8 +23,8 @@ let tcpEnabled = false;
 //let binFileInput;
 
 function preload() {
-  wordclocklogoImg = loadImage('data/wordclockConfLogo.png');
   testImg = loadImage('data/trigBoardlogo.png');
+  wordclocklogoImg = loadImage('data/wordclockConfLogo.png');
 }
 
 function setup() {
