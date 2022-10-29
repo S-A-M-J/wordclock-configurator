@@ -22,9 +22,11 @@ function gotCharacteristics(error, characteristics) {
   for (let i=0; i<2; i++) {
     if (characteristics[i].uuid == 'a5f125c1-7cec-4334-9214-58cffb8706c0') {
       blueToothTXCharacteristic = characteristics[i];
+      console.log('detected first characteristic');
     }
     if (characteristics[i].uuid == 'a5f125c2-7cec-4334-9214-58cffb8706c0') {
       blueToothRXCharacteristic = characteristics[i];
+      console.log('detected second characteristic');
     }
   }
 
@@ -70,11 +72,9 @@ function gotValue(value) {
     }
 
     if (wifiConnected) {
-      otaStartButton.show();
-      otaHelpTextTitle.hide();
+    
     } else {
-      otaStartButton.hide();
-      otaHelpTextTitle.show();
+     
     }
 
     if (firstConnected) {
@@ -90,60 +90,8 @@ function gotValue(value) {
   if (splitString[0]=='pw') {//pw string
     pwInput.value(splitString[1]);
   }
-  if (splitString[0]=='tout') {//timeout
-    wifiTimeoutInput.value(splitString[1]/1000);
-  }
-  if (splitString[0]=='name') {//name
-    wordclockNameInput.value(splitString[1]);
-  }
 
-  if (splitString[0]=='highSpd') {//high speed mode
-    if (splitString[1]=='t') {
-      highSpeedEnableCheckbox.checked(true);
-    } else {
-      highSpeedEnableCheckbox.checked(false);
-    }
-  }
-  if (splitString[0]=='clkEnable') {//clock enable
-    if (splitString[1]=='t') {
-      clockTimerEnableCheckbox.checked(true);
-      clockCurrentTime.show();
-      clockTimeZoneTitle.show();
-      clockTimeZone.show();
-      clockTimeZoneButton.show();
-      clockSetTimeNTPtitle.show();
-      clockAppendTitle.show();
-      clockAppendCheckbox.show();
-      clockAppendButton.show();
-      clockAlarmEnableTitle.show();
-      clockAlarmEnableCheckbox.show();
-      clockAlarmEnableButton.show();
-    } else {
-      clockTimerEnableCheckbox.checked(false);
-      clockCurrentTime.hide();
-      clockTimeZoneTitle.hide();
-      clockTimeZone.hide();
-      clockTimeZoneButton.hide();
-      clockSetTimeNTPtitle.hide();
-      clockSetTimeButton.hide();
-      clockAppendTitle.hide();
-      clockAppendCheckbox.hide();
-      clockAppendButton.hide();
-      clockAlarmEnableTitle.hide();
-      clockAlarmEnableCheckbox.hide();
-      clockAlarmEnableButton.hide();
-      clockAlarmSettingTitle.hide();
-      clockAlarmHour.hide();
-      clockAlarmMinute.hide();
-      clockAlarmButton.hide();
-      clockNTPupdateonAlarmTitle.hide();
-      clockNTPupdateonAlarmCheckbox.hide();
-      clockNTPupdateonAlarmButton.hide();
-      clockAlarmMessageTitle.hide();
-      clockAlarmMessage.hide();
-      clockAlarmMessageButton.hide();
-    }
-  }
+ 
 
   if (wifiConnected && clockTimerEnableCheckbox.checked()) {
     document.getElementById("clockSetTimeNTPtitleID").innerHTML = "Set Time with NTP server ";
@@ -163,89 +111,6 @@ function gotValue(value) {
       clockAppendCheckbox.checked(false);
     }
   }
-  if (splitString[0]=='clkAlarmEnable') {//clock append enable
-    if (splitString[1]=='t') {
-      clockAlarmEnableCheckbox.checked(true);
-      clockAlarmSettingTitle.show();
-      clockAlarmHour.show();
-      clockAlarmMinute.show();
-      clockAlarmButton.show();
-      clockNTPupdateonAlarmTitle.show();
-      clockNTPupdateonAlarmCheckbox.show();
-      clockNTPupdateonAlarmButton.show();
-      clockAlarmMessageTitle.show();
-      clockAlarmMessage.show();
-      clockAlarmMessageButton.show();
-      clockAppendAlarmTitle.show();
-      clockAppendAlarmCheckbox.show();
-      clockAppendAlarmButton.show();
-    } else {
-      clockAlarmEnableCheckbox.checked(false);
-      clockAlarmSettingTitle.hide();
-      clockAlarmHour.hide();
-      clockAlarmMinute.hide();
-      clockAlarmButton.hide();
-      clockNTPupdateonAlarmTitle.hide();
-      clockNTPupdateonAlarmCheckbox.hide();
-      clockNTPupdateonAlarmButton.hide();
-      clockAlarmMessageTitle.hide();
-      clockAlarmMessage.hide();
-      clockAlarmMessageButton.hide();
-      clockAppendAlarmTitle.hide();
-      clockAppendAlarmCheckbox.hide();
-      clockAppendAlarmButton.hide();
-    }
-  }
-  if (splitString[0]=='clkAlarmHour') {//clock alarm hour
-    clockAlarmHour.value(splitString[1]);
-  }
-  if (splitString[0]=='clkAlarmMinute') {//clock alarm hour
-    clockAlarmMinute.value(splitString[1]);
-  }
-  if (splitString[0]=='clkUpdateNPTenable') {//clock NPT update
-    if (splitString[1]=='t') {
-      clockNTPupdateonAlarmCheckbox.checked(true);
-    } else {
-      clockNTPupdateonAlarmCheckbox.checked(false);
-    }
-  }
-  if (splitString[0]=='clkAlarmMessage') {//clock alarm message
-    clockAlarmMessage.value(splitString[1]);
-  }
-  if (splitString[0]=='clkAppendAlmEnable') {//clock alarm append time
-    if (splitString[1]=='t') {
-      clockAppendAlarmCheckbox.checked(true);
-    } else {
-      clockAppendAlarmCheckbox.checked(false);
-    }
-  }
-
-  if (splitString[0]=='appendRSSI') {//append rssi
-    if (splitString[1]=='t') {
-      appendRSSIenableCheckbox.checked(true);
-    } else {
-      appendRSSIenableCheckbox.checked(false);
-    }
-  }
-
-  if (splitString[0]=='missionEnable') {//mission critical enable
-    if (splitString[1]=='t') {
-      missionCriticalEnableCheckbox.checked(true);
-      missionCriticalTimeTitle.show();
-      missionCriticalTimeInput.show();
-      missionCriticalTimeButton.show();
-    } else {
-      missionCriticalEnableCheckbox.checked(false);
-      missionCriticalTimeTitle.hide();
-      missionCriticalTimeInput.hide();
-      missionCriticalTimeButton.hide();
-    }
-  }
-
-  if (splitString[0]=='missionTimeafter') {//mission critical time
-    missionCriticalTimeInput.value(splitString[1]);
-  }
-}
 
 function onDisconnected() {
   console.log('Device got disconnected.');
