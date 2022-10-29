@@ -28,8 +28,6 @@ function checkUserIPaddress(userIP) {
 }
 //******************
 
-f
-
 function saveWiFi() {
   let sanitizer = checkUserString(ssidInput.value(), 50);
   if (sanitizer!=null) {
