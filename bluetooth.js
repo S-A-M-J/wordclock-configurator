@@ -52,22 +52,12 @@ function gotValue(value) {
     } else {
       wifiConnected=false;
     }
-    if (splitString[3]=='op') {
-      contactOpen=true;
-    } else {
-      contactOpen=false;
-    }
-    if (splitString[4]=='bt') {
-      buttonPressed=true;
-    } else {
-      buttonPressed=false;
-    }
-    macAddress = splitString[5];
-    fwVersion = splitString[6];
-    ipAddress = splitString[7];
-    connectedSSID = splitString[8];
+    macAddress = splitString[3];
+    fwVersion = splitString[4];
+    ipAddress = splitString[5];
+    connectedSSID = splitString[6];
     //here is where time can go
-    if (splitString[9]!=null) {
+    if (splitString[7]!=null) {
       document.getElementById("currentTimeID").innerHTML = splitString[9];
     }
 
@@ -89,27 +79,6 @@ function gotValue(value) {
   }
   if (splitString[0]=='pw') {//pw string
     pwInput.value(splitString[1]);
-  }
-
- 
-
-  if (wifiConnected && clockTimerEnableCheckbox.checked()) {
-    document.getElementById("clockSetTimeNTPtitleID").innerHTML = "Set Time with NTP server ";
-    clockSetTimeButton.show();
-  } else {
-    document.getElementById("clockSetTimeNTPtitleID").innerHTML = "Note: Connect to WiFi to set Time from NTP Server! ";
-    clockSetTimeButton.hide();
-  }
-
-  if (splitString[0]=='clkTimeZone') {//clock time zone
-    clockTimeZone.value(splitString[1]);
-  }
-  if (splitString[0]=='clkAppendEnable') {//clock append enable
-    if (splitString[1]=='t') {
-      clockAppendCheckbox.checked(true);
-    } else {
-      clockAppendCheckbox.checked(false);
-    }
   }
 }
 
