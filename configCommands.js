@@ -43,7 +43,7 @@ function saveWiFi() {
     ssidInput.value('error pw too short');
     return;
   }
-  sendData("#wifi,"+ssidInput.value() + "," + pwInput.value());
+  sendData("#wifi,"+ssidInput.value() + "," + pwInput.value()) + ",";
 }
 
 function killCommand() {
