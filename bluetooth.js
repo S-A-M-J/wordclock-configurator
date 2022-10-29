@@ -111,6 +111,7 @@ function gotValue(value) {
       clockAppendCheckbox.checked(false);
     }
   }
+}
 
 function onDisconnected() {
   console.log('Device got disconnected.');
