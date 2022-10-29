@@ -24,7 +24,7 @@ let tcpEnabled = false;
 
 function preload() {
   wordclocklogoImg = loadImage('data/wordclockConfLogo.png');
-  testImg = loadImage('data/trigBoardLogo.png');
+  testImg = loadImage('data/trigBoardlogo.png');
 }
 
 function setup() {
