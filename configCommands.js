@@ -215,8 +215,17 @@ function timerCommand() {
   }
   sendData("#tim,"+timerInput.value());
 }
+
 function timerSelectorCommand() {
   sendData("#tse,"+trim(timerSelector.value()));
+}
+
+function timerUnitSelectorCommand() {
+  if (timerUnitSelector.value()=='Minutes') {
+    sendData("#rtcme");
+  } else {
+    sendData("#rtcmd");
+  }
 }
 
 function timerStillOpenCommand() {
