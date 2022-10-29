@@ -52,15 +52,10 @@ function gotValue(value) {
     } else {
       wifiConnected=false;
     }
-    macAddress = splitString[3];
-    fwVersion = splitString[4];
-    ipAddress = splitString[5];
-    connectedSSID = splitString[6];
-    //here is where time can go
-    if (splitString[7]!=null) {
-      document.getElementById("currentTimeID").innerHTML = splitString[9];
-    }
-
+    macAddress = splitString[2];
+    fwVersion = splitString[3];
+    ipAddress = splitString[4];
+    connectedSSID = splitString[5];
     if (wifiConnected) {
     
     } else {
