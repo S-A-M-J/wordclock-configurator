@@ -35,14 +35,14 @@ function setup() {
 
   connectButton = createButton('CONNECT');
   connectButton.mousePressed(connectToBle);
-  connectButton.position(15, 150);
+  connectButton.position(15, 250);
   connectButton.style('color', color(255));
   connectButton.style('background-color', color(77, 158, 106));
 
   LEDblinkStartTime=millis();
 
   killButton = createButton('DISCONNECT');
-  killButton.position(15, 150);
+  killButton.position(15, 250);
   killButton.style('color', color(255));
   killButton.style('background-color', color(208, 93, 73));
   killButton.mousePressed(killCommand);
