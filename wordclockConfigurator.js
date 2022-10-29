@@ -6,6 +6,7 @@ let blueTooth;
 let isConnected = false;
 let connectButton;
 
+let wordclocklogoImg;
 //status variables
 let newData=false;
 let wifiConnected = false;
@@ -20,6 +21,9 @@ let udpEnabled = false;
 let tcpEnabled = false;
 //let binFileInput;
 
+function preload() {
+  wordclocklogoImg = loadImage('data/wordclock_conf_logo.png');
+}
 
 function setup() {
 
