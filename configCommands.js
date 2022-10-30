@@ -11,23 +11,6 @@ function checkUserString(userString, lengthCheck) {
   return null;
 }
 
-function checkUserIPaddress(userIP) {
-  let splitNumbers = split(userIP, '.');
-  if (splitNumbers.length>4 || splitNumbers.length<4) {
-    return 'error not valid';
-  }
-  for (let i=0; i<4; i++) {
-    if (isNaN(splitNumbers[i])) {
-      return 'error not valid';
-    }
-    if (splitNumbers[i]>255 || splitNumbers[i]<0) {
-      return 'error not valid';
-    }
-  }
-  return null;
-}
-//******************
-
 function saveWiFi() {
   let sanitizer = checkUserString(ssidInput.value(), 50);
   if (sanitizer!=null) {

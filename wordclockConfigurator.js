@@ -69,10 +69,12 @@ function setup() {
   WiFiButton.position(pwInput.x+pwInput.width, pwInput.y);
   WiFiButton.mousePressed(saveWiFi);
   //**************************************
-  
+  currentSsidTitle = createElement('h3', 'Current WiFi: ');
+  currentSsidTitle.position(10, WiFiButton.size().height+WiFiButton.y);
+  currentSsidOutput = createElement('h3', 'unknown');
+  currentSsidOutput.position(currentSsidTitle.size().width+currentSsidTitle.x+10, currentSsidTitle.y);
 
-  createCanvas(600, WiFiButton.y+100);
-
+  createCanvas(600, currentSsidOutput.y+100);
 
   hideAllParam();
 }
