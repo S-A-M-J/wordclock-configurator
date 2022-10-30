@@ -5,21 +5,14 @@ let blueToothTXCharacteristic;//this is a blu
 let blueTooth;
 let isConnected = false;
 let connectButton;
+let connectedSSID;
 
 let wordclocklogoImg;
 let testImg;
 //status variables
 let newData=false;
 let wifiConnected = false;
-let batteryVoltage=0.0;
-let contactOpen = false;
-let buttonPressed = false;
-let LEDblinkStartTime;
-let OTAinProgress=" ";
-let OTAisActive = false;
 let firstConnected = true;
-let udpEnabled = false;
-let tcpEnabled = false;
 //let binFileInput;
 
 function preload() {
@@ -71,7 +64,7 @@ function setup() {
   //**************************************
   currentSsidTitle = createElement('h3', 'Current WiFi: ');
   currentSsidTitle.position(10, WiFiButton.size().height+WiFiButton.y);
-  currentSsidOutput = createElement('h3', 'unknown');
+  currentSsidOutput = createElement('h3', connectedSSID);
   currentSsidOutput.position(currentSsidTitle.size().width+currentSsidTitle.x+10, currentSsidTitle.y);
 
   createCanvas(600, currentSsidOutput.y+100);

@@ -52,10 +52,7 @@ function gotValue(value) {
     } else {
       wifiConnected=false;
     }
-    macAddress = splitString[2];
-    fwVersion = splitString[3];
-    ipAddress = splitString[4];
-    connectedSSID = splitString[5];
+    connectedSSID = splitString[2];
     if (wifiConnected) {
     
     } else {

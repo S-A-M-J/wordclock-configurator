@@ -5,6 +5,8 @@ function showAllParam() {
   pwInput.show();
   WiFiButton.show();
   killButton.show();
+  currentSsidTitle.show();
+  currentSsidOutput.show();
 
 }
 function hideAllParam() {
@@ -13,7 +15,8 @@ function hideAllParam() {
   ssidPw.hide();
   pwInput.hide();
   WiFiButton.hide();
-  
+  currentSsidTitle.hide();
+  currentSsidOutput.hide();
   killButton.hide();
 
 }
