@@ -29,6 +29,10 @@ function drawScreen() {
         fill(255, 0, 0);
         text('WiFi\nDisconnected', 250, 250);
       }
+      if(falseWifiCredentials){
+        fill(255, 0, 0);
+        text('Wifi name or password is false.', 250, 250);
+      }
       textSize(18);
       fill(0);
       

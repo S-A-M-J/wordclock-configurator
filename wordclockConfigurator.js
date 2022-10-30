@@ -11,6 +11,7 @@ let testImg;
 //status variables
 let newData=false;
 let wifiConnected = false;
+let falseWifiCredentials = false;
 let firstConnected = true;
 //let binFileInput;
 

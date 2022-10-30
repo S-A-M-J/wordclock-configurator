@@ -53,6 +53,7 @@ function gotValue(value) {
     newData=true;
     if (splitString[1]=='co') {
       wifiConnected=true;
+      falseWifiCredentials=false;
     } else {
       wifiConnected=false;
     }
@@ -75,6 +76,9 @@ function gotValue(value) {
   }
   if (splitString[0]=='pw') {//pw string
     pwInput.value(splitString[1]);
+  }
+  if (splitString[0]=='wifiFailed') {//pw string
+    falseWifiCredentials=true;
   }
 }
 
