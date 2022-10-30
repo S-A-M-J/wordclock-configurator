@@ -5,6 +5,10 @@ function connectToBle() {
   console.log('trying to connect');
 }
 
+function disconnectBle(){
+  blueTooth.disconnect();
+}
+
 // A function that will be called once got characteristics
 function gotCharacteristics(error, characteristics) {
   console.log('looking for characteristics');
