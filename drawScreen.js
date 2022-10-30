@@ -32,20 +32,6 @@ function drawScreen() {
       textSize(18);
       fill(0);
       
-
-
-
-      if (buttonPressed) {
-        fill(0, 255, 0, 127);
-        rect(282, 420, 40, 40);//wake button rectangle
-      }
-      fill(0);
-      text(batteryVoltage+"V", 299, 565);
-      if (contactOpen) {
-        text("Contact\nOpen", 199, 565);
-      } else {
-        text("Contact\nClosed", 199, 565);
-      }
     }
   } else {
     //text('Bluetooth Disconnected :/', 80, 150);
