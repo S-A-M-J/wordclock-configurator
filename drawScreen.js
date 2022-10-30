@@ -24,15 +24,14 @@ function drawScreen() {
       if (wifiConnected) {
         textSize(14);
         fill(0, 255, 0);
-        text('WiFi\nConnected\n'+connectedSSID+'\n'+ipAddress, 250, 250);
+        text('WiFi\nConnected\n'+connectedSSID, 250, 250);
       } else {
         fill(255, 0, 0);
-        text('WiFi\nDisonnected', 250, 250);
+        text('WiFi\nDisconnected', 250, 250);
       }
       textSize(18);
       fill(0);
-      text('Firmware Version: '+ fwVersion, 250, 120);
-      text('MAC: '+macAddress, 250, 140);
+      
 
 
 

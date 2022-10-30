@@ -5,7 +5,6 @@ let blueToothTXCharacteristic;//this is a blu
 let blueTooth;
 let isConnected = false;
 let connectButton;
-let connectedSSID;
 
 let wordclocklogoImg;
 let testImg;
@@ -64,7 +63,7 @@ function setup() {
   //**************************************
   currentSsidTitle = createElement('h3', 'Current WiFi: ');
   currentSsidTitle.position(10, WiFiButton.size().height+WiFiButton.y);
-  currentSsidOutput = createElement('h3', connectedSSID);
+  currentSsidOutput = createElement('h3', 'connectedSSID');
   currentSsidOutput.position(currentSsidTitle.size().width+currentSsidTitle.x+10, currentSsidTitle.y);
 
   createCanvas(600, currentSsidOutput.y+100);
