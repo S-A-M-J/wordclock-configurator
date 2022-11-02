@@ -5,9 +5,6 @@ function showAllParam() {
   pwInput.show();
   WiFiButton.show();
   killButton.show();
-  AlexaEnableTitle.show();
-  AlexaEnableCheckbox.show();
-  AlexaEnableButton.show();
 }
 function hideAllParam() {
   ssidTitle.hide();
@@ -19,4 +16,9 @@ function hideAllParam() {
   AlexaEnableTitle.hide();
   AlexaEnableCheckbox.hide();
   AlexaEnableButton.hide();
+}
+function showWifiParam(){
+  AlexaEnableTitle.show();
+  AlexaEnableCheckbox.show();
+  AlexaEnableButton.show();
 }

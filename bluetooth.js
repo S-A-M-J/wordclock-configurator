@@ -59,7 +59,7 @@ function gotValue(value) {
     }
     connectedSSID = splitString[2];
     if (wifiConnected) {
-    
+      showWifiParam();
     } else {
      
     }
