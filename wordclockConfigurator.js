@@ -62,8 +62,16 @@ function setup() {
   WiFiButton.position(pwInput.x+pwInput.width, pwInput.y);
   WiFiButton.mousePressed(saveWiFi);
   //**************************************
+  AlexaEnableTitle = createElement('h4', 'Activate Alexa: ');
+  AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
+  AlexaEnableCheckbox = createCheckbox('', false);
+  AlexaEnableCheckbox.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+10, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
+  AlexaEnableButton = createButton('Save');
+  AlexaEnableButton.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+40, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
+  AlexaEnableButton.mousePressed(alexaEnableCommand);
+  //**************************************
 
-  createCanvas(600, WiFiButton.y+100);
+  createCanvas(600, AlexaEnableButton.y+100);
 
   hideAllParam();
 }

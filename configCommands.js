@@ -29,6 +29,14 @@ function saveWiFi() {
   sendData("#wifi,"+ssidInput.value() + "," + pwInput.value()) + ",";
 }
 
+function alexaEnableCommand(){
+  if (AlexaEnableCheckbox.checked()) {
+    sendData("#alexaOn");
+  } else {
+    sendData("#alexaOff");
+  }
+}
+
 function killCommand() {
   sendData("#kill,");
   disconnectBle();
