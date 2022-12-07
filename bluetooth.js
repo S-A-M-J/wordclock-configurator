@@ -60,11 +60,11 @@ function gotValue(value) {
     if (wifiConnected) {
       showWifiParam();
     } else {
-     
+    
     }
-
-    if (firstConnected) {
+    if (!firstConnected) {
       sendData("#param");
+      firstConnected=true;
     }
   }
 
