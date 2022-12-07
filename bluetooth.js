@@ -49,8 +49,8 @@ function gotCharacteristics(error, characteristics) {
 function gotValue(value) {
   console.log('value: ', value);
   let splitString = split(value, ',');
+  newData=true;
   if (splitString[0]=='stat') {//status string
-    newData=true;
     if (splitString[1]=='co') {
       wifiConnected=true;
       falseWifiCredentials=false;
@@ -67,8 +67,6 @@ function gotValue(value) {
       firstConnected=true;
     }
   }
-
-
   if (splitString[0]=='ssid') {//ssid string
     firstConnected = false;
     ssidInput.value(splitString[1]);
@@ -80,7 +78,6 @@ function gotValue(value) {
   if (splitString[0]=='wifiFailed') {//pw string
     falseWifiCredentials=true;
   }
-  draw();
 }
 
 function onDisconnected() {
