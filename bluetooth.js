@@ -80,6 +80,7 @@ function gotValue(value) {
   if (splitString[0]=='wifiFailed') {//pw string
     falseWifiCredentials=true;
   }
+  draw();
 }
 
 function onDisconnected() {
