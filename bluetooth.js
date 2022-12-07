@@ -65,7 +65,7 @@ function gotValue(value) {
     }
 
     if (firstConnected) {
-      //sendData("#param,");
+      sendData("#param");
     }
   }
 
