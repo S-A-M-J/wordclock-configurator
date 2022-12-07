@@ -57,7 +57,6 @@ function gotValue(value) {
     } else {
       wifiConnected=false;
     }
-    connectedSSID = splitString[2];
     if (wifiConnected) {
       showWifiParam();
     } else {
@@ -73,6 +72,7 @@ function gotValue(value) {
   if (splitString[0]=='ssid') {//ssid string
     firstConnected = false;
     ssidInput.value(splitString[1]);
+    connectedSSID = splitString[1];
   }
   if (splitString[0]=='pw') {//pw string
     pwInput.value(splitString[1]);

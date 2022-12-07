@@ -5,7 +5,7 @@ let blueToothTXCharacteristic;//this is a blu
 let blueTooth;
 let isConnected = false;
 let connectButton;
-
+let connectedSSID;
 let wordclocklogoImg;
 let testImg;
 //status variables
