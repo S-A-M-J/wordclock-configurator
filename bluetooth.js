@@ -47,7 +47,7 @@ function gotCharacteristics(error, characteristics) {
 
 // A function that will be called once got values
 function gotValue(value) {
-  // console.log('value: ', value);
+  console.log('value: ', value);
   let splitString = split(value, ',');
   if (splitString[0]=='stat') {//status string
     newData=true;
