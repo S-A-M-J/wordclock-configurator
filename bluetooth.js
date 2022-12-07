@@ -39,7 +39,7 @@ function gotCharacteristics(error, characteristics) {
 
   connectButton.hide();
   showAllParam();
-
+  sendData("#param");
   // Add a event handler when the device is disconnected
   blueTooth.onDisconnected(onDisconnected);
 }
