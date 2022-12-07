@@ -62,9 +62,9 @@ function gotValue(value) {
     } else {
     
     }
-    if (!firstConnected) {
+    if (firstConnected) {
       sendData("#param");
-      firstConnected=true;
+      firstConnected=false;
     }
   }
   if (splitString[0]=='ssid') {//ssid string
