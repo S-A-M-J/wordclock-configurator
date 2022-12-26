@@ -70,8 +70,13 @@ function setup() {
   AlexaEnableButton.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+40, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
   AlexaEnableButton.mousePressed(alexaEnableCommand);
   //**************************************
+    OTAButton = createButton('Initialize OTA');
+    OTAButton.position(10, AlexaEnableButton.y+AlexaEnableButton.size().height);
+    OTAButton.mousePressed(activateOTA);
+    OTAButton.style('color', color(255));
+    OTAButton.style('background-color', color(105, 158, 106));
 
-  createCanvas(600, AlexaEnableButton.y+100);
+  createCanvas(600, OTAButton.y+100);
 
   hideAllParam();
 }

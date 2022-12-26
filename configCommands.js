@@ -42,3 +42,7 @@ function killCommand() {
   disconnectBle();
 }
 
+function activateOTA() {
+  sendData("#OTAOn,");
+}
+
