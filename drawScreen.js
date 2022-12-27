@@ -24,7 +24,8 @@ function drawScreen() {
       if (wifiConnected) {
         textSize(14);
         fill(0, 255, 0);
-        text('WiFi\nConnected\n'+connectedSSID, 250, 250);
+        text('WiFi\nConnected\n'+connectedSSID+'\n'+ip, 250, 250);
+        text
       } else {
         fill(255, 0, 0);
         text('WiFi\nDisconnected', 250, 250);

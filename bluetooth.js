@@ -71,6 +71,7 @@ function gotValue(value) {
     firstConnected = false;
     ssidInput.value(splitString[1]);
     connectedSSID = splitString[1];
+    ip = splitString[2];
   }
   if (splitString[0]=='pw') {//pw string
     pwInput.value(splitString[1]);

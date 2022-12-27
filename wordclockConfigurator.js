@@ -8,6 +8,7 @@ let connectButton;
 let connectedSSID;
 let wordclocklogoImg;
 let testImg;
+let ip;
 //status variables
 let newData=false;
 let wifiConnected = false;

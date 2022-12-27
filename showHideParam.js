@@ -16,9 +16,11 @@ function hideAllParam() {
   AlexaEnableTitle.hide();
   AlexaEnableCheckbox.hide();
   AlexaEnableButton.hide();
+  OTAButton.hide();
 }
 function showWifiParam(){
   AlexaEnableTitle.show();
   AlexaEnableCheckbox.show();
   AlexaEnableButton.show();
+  OTAButton.show();
 }
