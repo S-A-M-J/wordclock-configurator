@@ -9,6 +9,7 @@ let connectedSSID;
 let wordclocklogoImg;
 let testImg;
 let ip;
+let otaStatus;
 //status variables
 let newData=false;
 let wifiConnected = false;
@@ -26,6 +27,7 @@ function setup() {
   // Create a p5ble class
   console.log("setting up");
   blueTooth = new p5ble();
+  otaStatus = 'not active';
 
   connectButton = createButton('CONNECT');
   connectButton.mousePressed(connectToBle);

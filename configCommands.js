@@ -44,5 +44,6 @@ function killCommand() {
 
 function activateOTA() {
   sendData("#OTAOn,");
+  otaStatus = 'OTA active';
 }
 
