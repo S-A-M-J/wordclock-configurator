@@ -22,6 +22,8 @@ function hideAllParam() {
   ResetButton.hide();
   DebugInput.hide();
   DebugButton.hide();
+  ColorPickerTitle.hide();
+  ColorPicker.hide();
 }
 function showWifiParam(){
   AlexaEnableTitle.show();
@@ -31,5 +33,7 @@ function showWifiParam(){
   OTAButton.show();
   OTATitle.show();
   ResetButton.show();
+  ColorPickerTitle.show();
+  ColorPicker.show();
 }
 
