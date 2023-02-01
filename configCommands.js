@@ -50,9 +50,9 @@ function mouseReleased() {
 
 function colorChanged(){
   colorMode(HSB,255,255,255);
-  let hue = hue(ColorPicker.color());
-  let sat = saturation(ColorPicker.color());
-  let bri = brightness(ColorPicker.color());
+  hueInput = hue(ColorPicker.color());
+  satInput = saturation(ColorPicker.color());
+  briInput = brightness(ColorPicker.color());
   sendData('#setColor,'+hue+','+sat+','+bri);
   colorMode(RGB,255);
 }

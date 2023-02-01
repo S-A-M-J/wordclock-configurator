@@ -10,6 +10,10 @@ let wordclocklogoImg;
 let testImg;
 let ip;
 let otaStatus;
+let hueInput;
+let briInput;
+let satInput;
+
 //status variables
 let newData = false;
 let wifiConnected = false;
