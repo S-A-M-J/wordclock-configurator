@@ -48,6 +48,14 @@ function mouseReleased() {
   }
 }
 
+function pickerColorChanged(){
+  console.log(ColorPicker.color());
+  //hueInput = hue(ColorPicker.color());
+  //satInput = saturation(ColorPicker.color());
+  //briInput = brightness(ColorPicker.color());
+  //sendData('#setColor,'+hueInput+','+satInput+','+briInput);
+}
+
 function resetCommand() {
   sendData("#reset,");
   disconnectBle();
