@@ -63,8 +63,10 @@ function setup() {
   AlexaOffTitle = createElement('h4', 'ON'); 
   AlexaOffTitle.position(AlexaStatusSlider.x+AlexaStatusSlider.size().width+5, AlexaOnTitle.y);
   //**************************************
+  OTATitle = createElement('h3', 'Firware update'); 
+  OTATitle.position(10, AlexaOnTitle.y+AlexaOnTitle.size().height+50);
   OTAButton = createButton('OTA aktivieren');
-  OTAButton.position(10, AlexaOnTitle.y+AlexaOnTitle.size().height+50);
+  OTAButton.position(10, OTATitle.y+OTATitle.size().height);
   OTAButton.mousePressed(activateOTA);
   OTAButton.style('color', color(255));
   OTAButton.style('background-color', color(0, 0, 255));
