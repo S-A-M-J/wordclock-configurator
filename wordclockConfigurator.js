@@ -76,9 +76,17 @@ function setup() {
   ResetButton.style('color', color(255));
   ResetButton.style('background-color', color(208, 93, 73));
   ResetButton.mousePressed(resetCommand);
-//Right side*****************************
+//****************************************
+DebugInput = createInput('');
+DebugInput.position(10, OTAButton.y+OTAButton.size().height+30);
+DebugButton = createButton('Send BLE data');
+DebugButton.position(10, DebugInput.y+DebugInput.size().height+5);
+DebugButton.style('color', color(255));
+DebugButton.style('background-color', color(208, 93, 73));
+DebugButton.mousePressed(sendDebugData);
 
-  createCanvas(1000, OTAButton.y+100);
+
+  createCanvas(1000, DebugButton.y+100);
 
   hideAllParam();
 }

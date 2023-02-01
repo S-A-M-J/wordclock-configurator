@@ -20,6 +20,8 @@ function hideAllParam() {
   OTAButton.hide();
   OTATitle.hide();
   ResetButton.hide();
+  DebugInput.hide();
+  DebugButton.hide();
 }
 function showWifiParam(){
   AlexaEnableTitle.show();

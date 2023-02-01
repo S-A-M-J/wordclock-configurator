@@ -26,7 +26,15 @@ function saveWiFi() {
     ssidInput.value('error pw too short');
     return;
   }
-  sendData("#wifi," + ssidInput.value() + "," + pwInput.value()) + ",";
+  if (ssidInput.value() == "debugshow") {
+    DebugInput.show();
+    DebugButton.show();
+  } else if (ssidInput.value() == "debughide") {
+    DebugInput.hide();
+    DebugButton.hide();
+  } else {
+    sendData("#wifi," + ssidInput.value() + "," + pwInput.value()) + ",";
+  }
 }
 
 function mouseReleased() {
@@ -43,6 +51,10 @@ function mouseReleased() {
 function resetCommand() {
   sendData("#reset,");
   disconnectBle();
+}
+
+function sendDebugData() {
+  sendData(DebugInput.value());
 }
 
 function activateOTA() {
