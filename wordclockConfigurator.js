@@ -64,7 +64,7 @@ function setup() {
   AlexaOffTitle.position(AlexaStatusSlider.x+AlexaStatusSlider.size().width+5, AlexaOnTitle.y);
   //**************************************
   OTAButton = createButton('OTA aktivieren');
-  OTAButton.position(10, AlexaStatusSlider.y+AlexaOnTitle.size().height+30);
+  OTAButton.position(10, AlexaOnTitle.y+AlexaOnTitle.size().height+30);
   OTAButton.mousePressed(activateOTA);
   OTAButton.style('color', color(255));
   OTAButton.style('background-color', color(105, 158, 106));
