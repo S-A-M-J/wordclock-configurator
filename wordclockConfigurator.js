@@ -67,6 +67,7 @@ function setup() {
   AlexaEnableTitle = createElement('h4', 'Activate Alexa: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
   AlexaStatusSlider = createSlider(0, 1, 0, 1);
+  AlexaStatusSlider.input(alexaEnableCommand);
   AlexaStatusSlider.class("AlexaStatusSlider");
   AlexaStatusSlider.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+10, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
   //**************************************
@@ -80,7 +81,6 @@ function setup() {
 
   hideAllParam();
 }
-
 
 function draw() {
   drawScreen();

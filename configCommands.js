@@ -30,10 +30,10 @@ function saveWiFi() {
 }
 
 function alexaEnableCommand(){
-  if (AlexaEnableCheckbox.checked()) {
-    sendData("#alexaOn");
-  } else {
+  if (AlexaStatusSlider.value() == "0") {
     sendData("#alexaOff");
+  } else {
+    sendData("#alexaOn");
   }
 }
 
