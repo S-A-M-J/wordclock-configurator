@@ -36,7 +36,6 @@ function gotCharacteristics(error, characteristics) {
 
   blueTooth.startNotifications(blueToothRXCharacteristic, gotValue, 'string');
   isConnected = blueTooth.isConnected();
-  gotValue(" ");
   connectButton.hide();
   showAllParam();
   sendData("#param");
@@ -56,6 +55,11 @@ function gotValue(value) {
       falseWifiCredentials=false;
     } else {
       wifiConnected=false;
+    }
+    if(splitString[2]=='co'){
+      AlexaStatusSlider.value(1);
+    } else {
+      AlexaStatusSlider.value(0);
     }
     if (wifiConnected) {
       showWifiParam();
