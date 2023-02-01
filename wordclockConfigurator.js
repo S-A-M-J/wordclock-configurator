@@ -66,11 +66,11 @@ function setup() {
   ColorPickerTitle = createElement('h3', 'Farbe auswählen');
   ColorPickerTitle.position(10, AlexaOnTitle.y + AlexaOnTitle.size().height + 50);
   ColorPicker = createColorPicker();
-  ColorPicker.position(10, ColorPickerTitle.y + ColorPickerTitle.size().height + 5);
+  ColorPicker.position(10, ColorPickerTitle.y + ColorPickerTitle.size().height + 5 + ColorPicker.size().height);
   ColorPicker.input(colorChanged);
   //**************************************
   OTATitle = createElement('h3', 'Firware update');
-  OTATitle.position(10, ColorPicker.y + ColorPicker.size().height + 50);
+  OTATitle.position(10, ColorPicker.y + ColorPicker.size().height + 30);
   OTAButton = createButton('OTA aktivieren');
   OTAButton.position(10, OTATitle.y + OTATitle.size().height * 2);
   OTAButton.mousePressed(activateOTA);
