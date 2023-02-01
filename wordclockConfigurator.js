@@ -65,9 +65,11 @@ function setup() {
   //**************************************
   ColorPickerTitle = createElement('h3', 'Farbe auswählen');
   ColorPickerTitle.position(10, AlexaOnTitle.y + AlexaOnTitle.size().height + 50);
+  colorMode(HSB);
   ColorPicker = createColorPicker();
   ColorPicker.position(10, ColorPickerTitle.y + ColorPickerTitle.size().height + 5 + ColorPicker.size().height);
   ColorPicker.input(colorChanged);
+  colorMode(RGB);
   //**************************************
   OTATitle = createElement('h3', 'Firware update');
   OTATitle.position(10, ColorPicker.y + ColorPicker.size().height + 30);

@@ -49,10 +49,12 @@ function mouseReleased() {
 }
 
 function colorChanged(){
+  colorMode(HSB);
   var hue = hue(ColorPicker.color());
   var sat = saturation(ColorPicker.color());
   var bri = brightness(ColorPicker.color());
   sendData('#setColor,'+hue+','+sat+','+bri);
+  colorMode(RGB);
 }
 
 function resetCommand() {
