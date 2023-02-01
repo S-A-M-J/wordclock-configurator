@@ -38,25 +38,29 @@ function setup() {
   let yPositionStart = 200;
   wifiTitle = createElement('h3', 'Wifi (2,4 GHz)');
   wifiTitle.position(10, yPositionStart);
-  ssidTitle = createElement('h3', 'Name');
+  ssidTitle = createElement('h4', 'Name');
   ssidTitle.position(10, wifiTitle.size().height+wifiTitle.y);
-  ssidPw = createElement('h3', 'Passwort');
+  ssidPw = createElement('h4', 'Passwort');
   ssidPw.position(10, ssidTitle.size().height+ssidTitle.y);
   ssidInput = createInput('');
-  ssidInput.position(ssidPw.size().width+ssidTitle.x+10, ssidTitle.size().height+ssidTitle.y);
+  ssidInput.position(ssidPw.size().width+ssidTitle.x+10, ssidTitle.size().height+ssidTitle.y-5);
   pwInput = createInput('', 'password');
-  pwInput.position(ssidPw.size().width+ssidPw.x+10, ssidPw.size().height+ssidPw.y);  
-  WiFiButton = createButton('Connect');
+  pwInput.position(ssidPw.size().width+ssidPw.x+10, ssidPw.size().height+ssidPw.y-5);  
+  WiFiButton = createButton('Verbinden');
   WiFiButton.position(pwInput.x, pwInput.y+pwInput.size().height+2);
   WiFiButton.mousePressed(saveWiFi);
   WiFiButton.style('color', color(255));
   WiFiButton.style('background-color', color(77, 158, 106));
   //**************************************
-  AlexaEnableTitle = createElement('h4', 'Activate Alexa: ');
+  AlexaEnableTitle = createElement('h4', 'Alexa aktivieren: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
+  AlexaOnTitle = createElement('h4', 'ON'); 
+  AlexaOnTitle.position(AlexaEnableTitle.x+AlexaEnableTitle.size().width+5, WiFiButton.size().height+WiFiButton.y+5);
   AlexaStatusSlider = createSlider(0, 1, 0, 1);
   AlexaStatusSlider.class("AlexaStatusSlider");
-  AlexaStatusSlider.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+10, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
+  AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
+  AlexaOffTitle = createElement('h4', 'OFF'); 
+  AlexaOffTitle.position(AlexaStatusSlider.x+AlexaStatusSlider.size().width+5, WiFiButton.size().height+WiFiButton.y+5);
   //**************************************
   OTAButton = createButton('OTA aktivieren');
   OTAButton.position(10, AlexaStatusSlider.y+AlexaStatusSlider.size().height+30);
