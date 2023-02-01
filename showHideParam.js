@@ -14,6 +14,8 @@ function hideAllParam() {
   pwInput.hide();
   WiFiButton.hide();
   AlexaEnableTitle.hide();
+  AlexaOnTitle.hide();
+  AlexaOffTitle.hide();
   AlexaStatusSlider.hide();
   OTAButton.hide();
   ResetButton.hide();
@@ -21,6 +23,8 @@ function hideAllParam() {
 function showWifiParam(){
   AlexaEnableTitle.show();
   AlexaStatusSlider.show();
+  AlexaOnTitle.show();
+  AlexaOffTitle.show();
   OTAButton.show();
   ResetButton.show();
 }

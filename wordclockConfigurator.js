@@ -43,19 +43,19 @@ function setup() {
   ssidPw = createElement('h4', 'Passwort');
   ssidPw.position(10, ssidTitle.size().height+ssidTitle.y);
   ssidInput = createInput('');
-  ssidInput.position(ssidPw.size().width+ssidTitle.x+10, ssidTitle.size().height+ssidTitle.y-5);
+  ssidInput.position(ssidPw.size().width+ssidTitle.x+10, ssidTitle.size().height+ssidTitle.y);
   pwInput = createInput('', 'password');
-  pwInput.position(ssidPw.size().width+ssidPw.x+10, ssidPw.size().height+ssidPw.y-5);  
+  pwInput.position(ssidPw.size().width+ssidPw.x+10, ssidPw.size().height+ssidPw.y);  
   WiFiButton = createButton('Verbinden');
   WiFiButton.position(pwInput.x, pwInput.y+pwInput.size().height+2);
   WiFiButton.mousePressed(saveWiFi);
   WiFiButton.style('color', color(255));
   WiFiButton.style('background-color', color(77, 158, 106));
   //**************************************
-  AlexaEnableTitle = createElement('h4', 'Alexa aktivieren: ');
+  AlexaEnableTitle = createElement('h3', 'Alexa: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
   AlexaOnTitle = createElement('h4', 'ON'); 
-  AlexaOnTitle.position(AlexaEnableTitle.x+AlexaEnableTitle.size().width+5, WiFiButton.size().height+WiFiButton.y+5);
+  AlexaOnTitle.position(AlexaEnableTitle.x+AlexaEnableTitle.size().width+5, AlexaEnableTitle.size().height+AlexaEnableTitle.y+5);
   AlexaStatusSlider = createSlider(0, 1, 0, 1);
   AlexaStatusSlider.class("AlexaStatusSlider");
   AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
