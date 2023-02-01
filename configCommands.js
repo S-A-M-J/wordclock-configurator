@@ -37,8 +37,8 @@ function alexaEnableCommand(){
   }
 }
 
-function killCommand() {
-  sendData("#kill,");
+function resetCommand() {
+  sendData("#reset,");
   disconnectBle();
 }
 

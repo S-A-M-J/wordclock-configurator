@@ -36,32 +36,19 @@ function setup() {
   connectButton.style('color', color(255));
   connectButton.style('background-color', color(77, 158, 106));
 
-  killButton = createButton('DISCONNECT');
-  killButton.position(15, 250);
-  killButton.style('color', color(255));
-  killButton.style('background-color', color(208, 93, 73));
-  killButton.mousePressed(killCommand);
-
-  //espotaButton = createButton('espota');
-  //espotaButton.position(380, 300);
-  //espotaButton.style('color', color(255));
-  //espotaButton.style('background-color', color(62, 129, 182));
-  //espotaButton.mousePressed(espotacommand);
-  ////binFileInput = createFileInput(handleFile);
-  ////binFileInput.position(380, 320);
-
   let yPositionStart = 300;
-  ssidTitle = createElement('h3', 'WiFi SSID (2.4GHz)');
-  ssidTitle.position(10, yPositionStart);
-  ssidInput = createInput('');
-  ssidInput.position(ssidTitle.size().width+ssidTitle.x+10, ssidTitle.size().height+ssidTitle.y);
-
-  ssidPw = createElement('h3', 'WiFi Password');
+  wifiTitle = createElement('h3', 'Wifi (2,4 GHz)');
+  wifiTitle.position(10, yPositionStart);
+  ssidTitle = createElement('h3', 'Name');
+  ssidTitle.position(10, wifiTitle.size().height+wifiTitle.y);
+  ssidPw = createElement('h3', 'Passwort');
   ssidPw.position(10, ssidTitle.size().height+ssidTitle.y);
+  ssidInput = createInput('');
+  ssidInput.position(ssidPw.size().width+ssidTitle.x+10, ssidTitle.size().height+ssidTitle.y);
   pwInput = createInput('', 'password');
   pwInput.position(ssidPw.size().width+ssidPw.x+10, ssidPw.size().height+ssidPw.y);  
-  WiFiButton = createButton('Save and Connect with DHCP');
-  WiFiButton.position(pwInput.x+pwInput.width, pwInput.y);
+  WiFiButton = createButton('Connect');
+  WiFiButton.position(pwInput.x, pwInput.y+pwInput.size().height+2);
   WiFiButton.mousePressed(saveWiFi);
   //**************************************
   AlexaEnableTitle = createElement('h4', 'Activate Alexa: ');
@@ -76,8 +63,14 @@ function setup() {
   OTAButton.mousePressed(activateOTA);
   OTAButton.style('color', color(255));
   OTAButton.style('background-color', color(105, 158, 106));
+ //**************************************
+  ResetButton = createButton('DISCONNECT');
+  ResetButton.position(300, 250);
+  ResetButton.style('color', color(255));
+  ResetButton.style('background-color', color(208, 93, 73));
+  ResetButton.mousePressed(resetCommand);
 
-  createCanvas(600, OTAButton.y+100);
+  createCanvas(600, ResetButton.y+100);
 
   hideAllParam();
 }
