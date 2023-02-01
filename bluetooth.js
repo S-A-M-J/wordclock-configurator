@@ -5,14 +5,14 @@ function connectToBle() {
   console.log('trying to connect');
 }
 
-function disconnectBle(){
+function disconnectBle() {
   blueTooth.disconnect();
 }
 
 // A function that will be called once got characteristics
 function gotCharacteristics(error, characteristics) {
   console.log('looking for characteristics');
-  if (error) { 
+  if (error) {
     console.log('error: ', error);
   }
   console.log('characteristics: ', characteristics);
@@ -23,7 +23,7 @@ function gotCharacteristics(error, characteristics) {
   }
 
 
-  for (let i=0; i<2; i++) {
+  for (let i = 0; i < 2; i++) {
     if (characteristics[i].uuid == 'a5f125c1-7cec-4334-9214-58cffb8706c0') {
       blueToothTXCharacteristic = characteristics[i];
       console.log('detected first characteristic');
@@ -48,40 +48,28 @@ function gotCharacteristics(error, characteristics) {
 function gotValue(value) {
   console.log('value: ', value);
   let splitString = split(value, ',');
-  newData=true;
-  if (splitString[0]=='stat') {//status string
-    if (splitString[1]=='co') {
-      wifiConnected=true;
-      falseWifiCredentials=false;
-    } else {
-      wifiConnected=false;
+  newData = true;
+  if (splitString[0] == 'stat') {//status string
+    if (splitString[1] == 'co') {
+      wifiConnected = true;
+      falseWifiCredentials = false;
+      showWifiParam();
     }
-    if(splitString[2]=='co'){
+    ssidInput.value(splitString[2]);
+    connectedSSID = splitString[2];
+    ip = splitString[3];
+    if(splitString[4] == 'on'){
       AlexaStatusSlider.value(1);
     } else {
       AlexaStatusSlider.value(0);
     }
-    if (wifiConnected) {
-      showWifiParam();
-    } else {
-    
-    }
     if (firstConnected) {
       sendData("#param");
-      firstConnected=false;
+      firstConnected = false;
     }
-  }
-  if (splitString[0]=='ssid') {//ssid string
-    firstConnected = false;
-    ssidInput.value(splitString[1]);
-    connectedSSID = splitString[1];
-    ip = splitString[2];
-  }
-  if (splitString[0]=='pw') {//pw string
-    pwInput.value(splitString[1]);
-  }
-  if (splitString[0]=='wifiFailed') {//pw string
-    falseWifiCredentials=true;
+  } else if (splitString[0] == 'wifiFailed') {//pw string
+    falseWifiCredentials = true;
+    wifiConnected = false;
   }
 }
 
