@@ -49,11 +49,13 @@ function mouseReleased() {
 }
 
 function pickerColorChanged(){
-  console.log(hue(ColorPicker.value()));
-  hueInput = hue(ColorPicker.value);
-  satInput = saturation(ColorPicker.color());
-  briInput = brightness(ColorPicker.color());
+  colorMode(HSB,255);
+  //console.log(hue(ColorPicker.value()));
+  hueInput = hue(color(ColorPicker.value()));
+  satInput = saturation(ColorPicker.value());
+  briInput = brightness(ColorPicker.value());
   sendData('#setColor,'+hueInput+','+satInput+','+briInput);
+  colorMode(RGB,255);
 }
 
 function resetCommand() {
