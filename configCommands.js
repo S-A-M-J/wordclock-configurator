@@ -49,12 +49,12 @@ function mouseReleased() {
 }
 
 function colorChanged(){
-  colorMode(HSB);
-  var hue = hue(ColorPicker.color());
-  var sat = saturation(ColorPicker.color());
-  var bri = brightness(ColorPicker.color());
+  colorMode(HSB,255,255,255);
+  let hue = hue(ColorPicker.color());
+  let sat = saturation(ColorPicker.color());
+  let bri = brightness(ColorPicker.color());
   sendData('#setColor,'+hue+','+sat+','+bri);
-  colorMode(RGB);
+  colorMode(RGB,255);
 }
 
 function resetCommand() {
