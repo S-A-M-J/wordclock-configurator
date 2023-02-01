@@ -20,6 +20,7 @@ let firstConnected = true;
 function preload() {
   testImg = loadImage('data/trigBoardlogo.png');
   wordclocklogoImg = loadImage('data/wordclockConfLogo.png');
+  wordclockImg = loadImage('data/wordclockImg.png');
 }
 
 function setup() {
@@ -34,8 +35,6 @@ function setup() {
   connectButton.position(15, 250);
   connectButton.style('color', color(255));
   connectButton.style('background-color', color(77, 158, 106));
-
-  LEDblinkStartTime=millis();
 
   killButton = createButton('DISCONNECT');
   killButton.position(15, 250);
@@ -67,8 +66,8 @@ function setup() {
   //**************************************
   AlexaEnableTitle = createElement('h4', 'Activate Alexa: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
-  AlexaEnableCheckbox = createCheckbox('', false);
-  AlexaEnableCheckbox.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+10, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
+  AlexaStatusSlider = createSlider(0, 1, 0, 1);
+  AlexaStatusSlider.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+10, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
   AlexaEnableButton = createButton('Save');
   AlexaEnableButton.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+40, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
   AlexaEnableButton.mousePressed(alexaEnableCommand);

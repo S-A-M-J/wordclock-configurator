@@ -8,14 +8,6 @@ function drawScreen() {
   if (isConnected) {
     //text('Bluetooth Connected :)', 10, 140);
     if (newData) {
-      noStroke();
-      if (millis()-LEDblinkStartTime < 200) {
-        fill(71, 134, 222, 150);//LED flasher
-        rect(243, 520, 13, 20);
-      }
-      if (millis()-LEDblinkStartTime > 400) {
-        LEDblinkStartTime=millis();
-      }
 
       fill(0);
 
