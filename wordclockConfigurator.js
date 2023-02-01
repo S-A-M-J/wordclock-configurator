@@ -55,19 +55,19 @@ function setup() {
   //**************************************
   AlexaEnableTitle = createElement('h3', 'Alexa: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
-  AlexaOnTitle = createElement('h4', 'ON'); 
+  AlexaOnTitle = createElement('h4', 'OFF'); 
   AlexaOnTitle.position(10, AlexaEnableTitle.size().height+AlexaEnableTitle.y+5);
   AlexaStatusSlider = createSlider(0, 1, 0, 1);
   AlexaStatusSlider.class("AlexaStatusSlider");
-  AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaOnTitle.y+15);
-  AlexaOffTitle = createElement('h4', 'OFF'); 
+  AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaOnTitle.y+17);
+  AlexaOffTitle = createElement('h4', 'ON'); 
   AlexaOffTitle.position(AlexaStatusSlider.x+AlexaStatusSlider.size().width+5, AlexaOnTitle.y);
   //**************************************
   OTAButton = createButton('OTA aktivieren');
   OTAButton.position(10, AlexaOnTitle.y+AlexaOnTitle.size().height+50);
   OTAButton.mousePressed(activateOTA);
   OTAButton.style('color', color(255));
-  OTAButton.style('background-color', color(105, 158, 106));
+  OTAButton.style('background-color', color(0, 0, 255));
  //**************************************
   ResetButton = createButton('Reset Uhr');
   ResetButton.position(wordclockImgPosX, 480);
