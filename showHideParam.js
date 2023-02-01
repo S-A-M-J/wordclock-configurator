@@ -14,14 +14,12 @@ function hideAllParam() {
   WiFiButton.hide();
   killButton.hide();
   AlexaEnableTitle.hide();
-  AlexaEnableCheckbox.hide();
-  AlexaEnableButton.hide();
+  AlexaStatusSlider.hide();
   OTAButton.hide();
 }
 function showWifiParam(){
   AlexaEnableTitle.show();
-  AlexaEnableCheckbox.show();
-  AlexaEnableButton.show();
+  AlexaStatusSlider.show();
   OTAButton.show();
 }
 
