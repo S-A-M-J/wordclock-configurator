@@ -58,8 +58,8 @@ function setup() {
   AlexaStatusSlider.class("AlexaStatusSlider");
   AlexaStatusSlider.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+10, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
   //**************************************
-  OTAButton = createButton('Initialize OTA');
-  OTAButton.position(10, AlexaStatusSlider.y+AlexaStatusSlider.size().height);
+  OTAButton = createButton('OTA aktivieren');
+  OTAButton.position(10, AlexaStatusSlider.y+AlexaStatusSlider.size().height+10);
   OTAButton.mousePressed(activateOTA);
   OTAButton.style('color', color(255));
   OTAButton.style('background-color', color(105, 158, 106));
