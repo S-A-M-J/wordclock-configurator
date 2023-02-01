@@ -29,8 +29,8 @@ function saveWiFi() {
   sendData("#wifi,"+ssidInput.value() + "," + pwInput.value()) + ",";
 }
 
-function alexaEnableCommand(){
-  if (AlexaStatusSlider.value() == "0") {
+function mouseReleased() {
+   if (AlexaStatusSlider.value() == "0") {
     sendData("#alexaOff");
   } else {
     sendData("#alexaOn");

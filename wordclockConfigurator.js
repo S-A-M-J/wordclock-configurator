@@ -65,7 +65,7 @@ function setup() {
   OTAButton.style('color', color(255));
   OTAButton.style('background-color', color(105, 158, 106));
  //**************************************
-  ResetButton = createButton('DISCONNECT');
+  ResetButton = createButton('Reset Uhr');
   ResetButton.position(300, 250);
   ResetButton.style('color', color(255));
   ResetButton.style('background-color', color(208, 93, 73));

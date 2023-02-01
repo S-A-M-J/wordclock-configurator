@@ -8,23 +8,23 @@ function drawScreen() {
   if (isConnected) {
     //text('Bluetooth Connected :)', 10, 140);
     if (newData) {
-      image(wordclockImg, 20, 200);
+      image(wordclockImg, 500, 200, 200, 200);
       fill(0);
 
-      textAlign(CENTER, Right);
+      textAlign(CENTER, TOP);
 
       if (wifiConnected) {
         textSize(14);
         fill(0, 255, 0);
-        text('WiFi\nConnected\n'+connectedSSID+'\n'+ip+'\n'+otaStatus, 500, 500);
+        text('WiFi\nConnected\n'+connectedSSID+'\n'+ip+'\n'+otaStatus, 600, 420);
         text
       } else {
         fill(255, 0, 0);
-        text('WiFi\nDisconnected', 500, 500);
+        text('WiFi\nDisconnected', 600, 420);
       }
       if(falseWifiCredentials){
         fill(255, 0, 0);
-        text('Wifi name or password is false.', 500, 500);
+        text('Wifi name or password is false.', 600, 420);
       }
       textSize(18);
       fill(0);
