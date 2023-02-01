@@ -8,7 +8,7 @@ function drawScreen() {
   if (isConnected) {
     //text('Bluetooth Connected :)', 10, 140);
     if (newData) {
-
+      image(wordclockImg, 20, 200);
       fill(0);
 
       textAlign(CENTER, TOP);
