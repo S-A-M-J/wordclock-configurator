@@ -70,6 +70,8 @@ function gotValue(value) {
   } else if (splitString[0] == 'wifiFailed') {//pw string
     falseWifiCredentials = true;
     wifiConnected = false;
+  } else if (splitString[0] == 'wifiNotConfigured') {//pw string
+    wifiConnected = false;
   }
 }
 

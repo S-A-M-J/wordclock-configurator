@@ -26,7 +26,7 @@ function drawScreen() {
         text('WiFi not Connected', wordclockImgPosX, 420);
       }
       if(falseWifiCredentials){
-        fill(0, 0, 0);
+        fill(255, 0, 0);
         text('Wifi name or password is false.', wordclockImgPosX, 420 + 16);
       }
       textSize(18);
