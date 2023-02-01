@@ -52,8 +52,8 @@ function pickerColorChanged(){
   colorMode(HSB,255);
   //console.log(hue(ColorPicker.value()));
   hueInput = hue(color(ColorPicker.value()));
-  satInput = saturation(ColorPicker.value());
-  briInput = brightness(ColorPicker.value());
+  satInput = saturation(color(ColorPicker.value()));
+  briInput = brightness(color(ColorPicker.value()));
   sendData('#setColor,'+hueInput+','+satInput+','+briInput);
   colorMode(RGB,255);
 }
