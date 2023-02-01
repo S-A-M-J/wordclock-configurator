@@ -53,7 +53,7 @@ function colorChanged(){
   hueInput = hue(ColorPicker.color());
   satInput = saturation(ColorPicker.color());
   briInput = brightness(ColorPicker.color());
-  sendData('#setColor,'+hue+','+sat+','+bri);
+  sendData('#setColor,'+hueInput+','+satInput+','+briInput);
   colorMode(RGB,255);
 }
 
