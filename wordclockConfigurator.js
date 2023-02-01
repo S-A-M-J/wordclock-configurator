@@ -39,7 +39,7 @@ function setup() {
   wifiTitle = createElement('h3', 'Wifi (2,4 GHz)');
   wifiTitle.position(10, yPositionStart);
   ssidTitle = createElement('h4', 'Name');
-  ssidTitle.position(10, wifiTitle.size().height+wifiTitle.y);
+  ssidTitle.position(10, wifiTitle.size().height+wifiTitle.y+5);
   ssidPw = createElement('h4', 'Passwort');
   ssidPw.position(10, ssidTitle.size().height+ssidTitle.y);
   ssidInput = createInput('');
@@ -55,12 +55,12 @@ function setup() {
   AlexaEnableTitle = createElement('h3', 'Alexa: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
   AlexaOnTitle = createElement('h4', 'ON'); 
-  AlexaOnTitle.position(AlexaEnableTitle.x+AlexaEnableTitle.size().width+5, AlexaEnableTitle.size().height+AlexaEnableTitle.y+5);
+  AlexaOnTitle.position(10, AlexaEnableTitle.size().height+AlexaEnableTitle.y+5);
   AlexaStatusSlider = createSlider(0, 1, 0, 1);
   AlexaStatusSlider.class("AlexaStatusSlider");
-  AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
+  AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaOnTitle.y);
   AlexaOffTitle = createElement('h4', 'OFF'); 
-  AlexaOffTitle.position(AlexaStatusSlider.x+AlexaStatusSlider.size().width+5, WiFiButton.size().height+WiFiButton.y+5);
+  AlexaOffTitle.position(AlexaStatusSlider.x+AlexaStatusSlider.size().width+5, AlexaOnTitle.y);
   //**************************************
   OTAButton = createButton('OTA aktivieren');
   OTAButton.position(10, AlexaStatusSlider.y+AlexaStatusSlider.size().height+30);
@@ -69,7 +69,7 @@ function setup() {
   OTAButton.style('background-color', color(105, 158, 106));
  //**************************************
   ResetButton = createButton('Reset Uhr');
-  ResetButton.position(600, 500);
+  ResetButton.position(wordclockImgPosX, 500);
   ResetButton.style('color', color(255));
   ResetButton.style('background-color', color(208, 93, 73));
   ResetButton.mousePressed(resetCommand);
