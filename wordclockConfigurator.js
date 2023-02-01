@@ -52,7 +52,6 @@ function setup() {
   WiFiButton.mousePressed(saveWiFi);
   WiFiButton.style('color', color(255));
   WiFiButton.style('background-color', color(77, 158, 106));
-
   //**************************************
   AlexaEnableTitle = createElement('h4', 'Activate Alexa: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
@@ -72,8 +71,9 @@ function setup() {
   ResetButton.style('color', color(255));
   ResetButton.style('background-color', color(208, 93, 73));
   ResetButton.mousePressed(resetCommand);
+//Right side*****************************
 
-  createCanvas(600, ResetButton.y+100);
+  createCanvas(800, ResetButton.y+100);
 
   hideAllParam();
 }

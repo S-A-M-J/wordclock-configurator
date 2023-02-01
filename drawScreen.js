@@ -11,20 +11,20 @@ function drawScreen() {
       image(wordclockImg, 20, 200);
       fill(0);
 
-      textAlign(CENTER, TOP);
+      textAlign(CENTER, Right);
 
       if (wifiConnected) {
         textSize(14);
         fill(0, 255, 0);
-        text('WiFi\nConnected\n'+connectedSSID+'\n'+ip+'\n'+otaStatus, 250, 250);
+        text('WiFi\nConnected\n'+connectedSSID+'\n'+ip+'\n'+otaStatus, 500, 500);
         text
       } else {
         fill(255, 0, 0);
-        text('WiFi\nDisconnected', 250, 250);
+        text('WiFi\nDisconnected', 500, 500);
       }
       if(falseWifiCredentials){
         fill(255, 0, 0);
-        text('Wifi name or password is false.', 250, 250);
+        text('Wifi name or password is false.', 500, 500);
       }
       textSize(18);
       fill(0);
