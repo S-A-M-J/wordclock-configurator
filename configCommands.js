@@ -5,7 +5,7 @@ function checkUserString(userString, lengthCheck) {
   if (match(userString, "#") != null || match(userString, ",") != null) {
     return 'error no # or comma';
   }
-  if (userString.length >=lengthCheck) {
+  if (userString.length >= lengthCheck) {
     return 'error too long';
   }
   return null;
@@ -13,27 +13,30 @@ function checkUserString(userString, lengthCheck) {
 
 function saveWiFi() {
   let sanitizer = checkUserString(ssidInput.value(), 50);
-  if (sanitizer!=null) {
+  if (sanitizer != null) {
     ssidInput.value(sanitizer);
     return;
   }
   sanitizer = checkUserString(pwInput.value(), 50);
-  if (sanitizer!=null) {
+  if (sanitizer != null) {
     ssidInput.value(sanitizer);
     return;
   }
-  if (pwInput.value().length <8) {
+  if (pwInput.value().length < 8) {
     ssidInput.value('error pw too short');
     return;
   }
-  sendData("#wifi,"+ssidInput.value() + "," + pwInput.value()) + ",";
+  sendData("#wifi," + ssidInput.value() + "," + pwInput.value()) + ",";
 }
 
 function mouseReleased() {
-   if (AlexaStatusSlider.value() == "0") {
-    sendData("#alexaOff");
-  } else {
-    sendData("#alexaOn");
+  if (lastSliderStatus != AlexaStatusSlider.value()) {
+    if (AlexaStatusSlider.value() == "0" && wifiConnected) {
+      sendData("#alexaOff");
+    } else {
+      sendData("#alexaOn");
+    }
+    lastSliderStatus = AlexaStatusSlider.value();
   }
 }
 

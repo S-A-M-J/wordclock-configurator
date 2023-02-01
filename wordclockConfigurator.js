@@ -15,6 +15,7 @@ let newData=false;
 let wifiConnected = false;
 let falseWifiCredentials = false;
 let firstConnected = true;
+let lastSliderStatus = 0;
 //let binFileInput;
 
 function preload() {
