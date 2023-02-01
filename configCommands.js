@@ -49,7 +49,7 @@ function mouseReleased() {
 }
 
 function pickerColorChanged(){
-  console.log(ColorPicker.color());
+  console.log(hue(ColorPicker.color()));
   //hueInput = hue(ColorPicker.color());
   //satInput = saturation(ColorPicker.color());
   //briInput = brightness(ColorPicker.color());
