@@ -50,6 +50,9 @@ function setup() {
   WiFiButton = createButton('Connect');
   WiFiButton.position(pwInput.x, pwInput.y+pwInput.size().height+2);
   WiFiButton.mousePressed(saveWiFi);
+  WiFiButton.style('color', color(255));
+  WiFiButton.style('background-color', color(77, 158, 106));
+
   //**************************************
   AlexaEnableTitle = createElement('h4', 'Activate Alexa: ');
   AlexaEnableTitle.position(10, WiFiButton.size().height+WiFiButton.y+5);
