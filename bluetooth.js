@@ -36,7 +36,7 @@ function gotCharacteristics(error, characteristics) {
 
   blueTooth.startNotifications(blueToothRXCharacteristic, gotValue, 'string');
   isConnected = blueTooth.isConnected();
-
+  gotValue(" ");
   connectButton.hide();
   showAllParam();
   sendData("#param");
