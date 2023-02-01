@@ -28,7 +28,6 @@ function setup() {
   // Create a p5ble class
   console.log("setting up");
   blueTooth = new p5ble();
-  otaStatus = 'not active';
 
   connectButton = createButton('CONNECT');
   connectButton.mousePressed(connectToBle);
@@ -36,7 +35,7 @@ function setup() {
   connectButton.style('color', color(255));
   connectButton.style('background-color', color(77, 158, 106));
 
-  let yPositionStart = 300;
+  let yPositionStart = 200;
   wifiTitle = createElement('h3', 'Wifi (2,4 GHz)');
   wifiTitle.position(10, yPositionStart);
   ssidTitle = createElement('h3', 'Name');
@@ -60,13 +59,13 @@ function setup() {
   AlexaStatusSlider.position(AlexaEnableTitle.size().width+AlexaEnableTitle.x+10, AlexaEnableTitle.size().height+AlexaEnableTitle.y);
   //**************************************
   OTAButton = createButton('OTA aktivieren');
-  OTAButton.position(10, AlexaStatusSlider.y+AlexaStatusSlider.size().height+10);
+  OTAButton.position(10, AlexaStatusSlider.y+AlexaStatusSlider.size().height+30);
   OTAButton.mousePressed(activateOTA);
   OTAButton.style('color', color(255));
   OTAButton.style('background-color', color(105, 158, 106));
  //**************************************
   ResetButton = createButton('Reset Uhr');
-  ResetButton.position(300, 250);
+  ResetButton.position(600, 500);
   ResetButton.style('color', color(255));
   ResetButton.style('background-color', color(208, 93, 73));
   ResetButton.mousePressed(resetCommand);

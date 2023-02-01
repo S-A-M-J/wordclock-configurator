@@ -44,6 +44,5 @@ function resetCommand() {
 
 function activateOTA() {
   sendData("#OTAOn,");
-  otaStatus = 'OTA active';
 }
 

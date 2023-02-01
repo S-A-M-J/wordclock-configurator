@@ -11,13 +11,14 @@ function drawScreen() {
       image(wordclockImg, 500, 200, 200, 200);
       fill(0);
 
-      textAlign(CENTER, TOP);
+      textAlign(LEFT, TOP);
 
       if (wifiConnected) {
         textSize(14);
         fill(0, 255, 0);
-        text('WiFi\nConnected\n'+connectedSSID+'\n'+ip+'\n'+otaStatus, 600, 420);
-        text
+        text('WiFi Connected\n');
+        fill(0,0,0);
+        text('WiFi Name: '+connectedSSID+'\n'+'IP: '+ip+'\n', 600, 420);
       } else {
         fill(255, 0, 0);
         text('WiFi\nDisconnected', 600, 420);
