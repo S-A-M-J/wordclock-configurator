@@ -27,7 +27,7 @@ function drawScreen() {
       }
       if(falseWifiCredentials){
         fill(255, 0, 0);
-        text('Wifi name or password is false.', wordclockImgPosX, 420 + 16);
+        text('WiFi name or password is false.', wordclockImgPosX, 420 + 32);
       }
       textSize(18);
       fill(0);
