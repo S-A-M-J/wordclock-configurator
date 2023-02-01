@@ -59,7 +59,7 @@ function setup() {
   AlexaOnTitle.position(10, AlexaEnableTitle.size().height+AlexaEnableTitle.y+5);
   AlexaStatusSlider = createSlider(0, 1, 0, 1);
   AlexaStatusSlider.class("AlexaStatusSlider");
-  AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaOnTitle.y+AlexaOnTitle.size);
+  AlexaStatusSlider.position(AlexaOnTitle.size().width+AlexaOnTitle.x+5, AlexaOnTitle.y);
   AlexaOffTitle = createElement('h4', 'OFF'); 
   AlexaOffTitle.position(AlexaStatusSlider.x+AlexaStatusSlider.size().width+5, AlexaOnTitle.y);
   //**************************************
