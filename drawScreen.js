@@ -18,15 +18,15 @@ function drawScreen() {
       if (wifiConnected) {
         textSize(14);
         fill(0, 255, 0);
-        text('WiFi Connected\n');
+        text('WiFi Connected\n', wordclockImgPosX, 420);
         fill(0,0,0);
         text('WiFi Name: '+connectedSSID+'\n'+'IP: '+ip+'\n', wordclockImgPosX, 420);
       } else {
         fill(255, 0, 0);
-        text('WiFi\nDisconnected', wordclockImgPosX, 420);
+        text('WiFi not Connected', wordclockImgPosX, 420);
       }
       if(falseWifiCredentials){
-        fill(255, 0, 0);
+        fill(0, 0, 0);
         text('Wifi name or password is false.', wordclockImgPosX, 420);
       }
       textSize(18);
