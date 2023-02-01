@@ -69,11 +69,10 @@ function setup() {
   //**************************************
   ColorPickerTitle = createElement('h3', 'Farbe auswählen');
   ColorPickerTitle.position(10, AlexaOnTitle.y + AlexaOnTitle.size().height + 50);
-  colorMode(HSB,255,255,255);
+  colorMode(HSB, 255, 255, 255);
   ColorPicker = createColorPicker();
   ColorPicker.position(10, ColorPickerTitle.y + ColorPickerTitle.size().height + 5 + ColorPicker.size().height);
-  ColorPicker.input(colorChanged);
-  colorMode(RGB,255);
+  colorMode(RGB, 255);
   //**************************************
   OTATitle = createElement('h3', 'Firware update');
   OTATitle.position(10, ColorPicker.y + ColorPicker.size().height + 30);
@@ -105,4 +104,12 @@ function setup() {
 
 function draw() {
   drawScreen();
+  if (ColorPicker.input.isChanged()) {
+    colorMode(HSB, 255, 255, 255);
+    hueInput = hue(ColorPicker.color());
+    satInput = saturation(ColorPicker.color());
+    briInput = brightness(ColorPicker.color());
+    sendData('#setColor,' + hueInput + ',' + satInput + ',' + briInput);
+    colorMode(RGB, 255);
+  }
 }
