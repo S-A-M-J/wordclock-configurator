@@ -84,7 +84,7 @@ function setup() {
   OTAButton.style('background-color', color(0, 0, 255));
   //**************************************
   DownloadButton = createButton("Download Firmware updater");
-  DownloadButton.position(10,OTAButton.y+OTAButton.size().height+30);
+  DownloadButton.position(10,OTAButton.y+OTAButton.size().height+15);
   DownloadButton.mousePressed(openTab);
   //**************************************
   ResetButton = createButton('Reset Uhr');
