@@ -67,6 +67,10 @@ function sendDebugData() {
   sendData(DebugInput.value());
 }
 
+function openTab() {
+  window.open("https://github.com/S-A-M-J/wordclockUpdater/releases", "_blank");
+}
+
 function activateOTA() {
   sendData("#OTAOn,");
 }
