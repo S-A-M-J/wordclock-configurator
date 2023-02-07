@@ -14,33 +14,31 @@ function gotCharacteristics(error, characteristics) {
   console.log('looking for characteristics');
   if (error) {
     console.log('error: ', error);
-  }
-  console.log('characteristics: ', characteristics);
-
-  console.log(characteristics.length);
-  if (characteristics.length != 2) {
-    return;
-  }
-
-
-  for (let i = 0; i < 2; i++) {
-    if (characteristics[i].uuid == 'a5f125c1-7cec-4334-9214-58cffb8706c0') {
-      blueToothTXCharacteristic = characteristics[i];
-      console.log('detected first characteristic');
+  } else {
+    console.log('characteristics: ', characteristics);
+    console.log(characteristics.length);
+    if (characteristics.length != 2) {
+      return;
     }
-    if (characteristics[i].uuid == 'a5f125c2-7cec-4334-9214-58cffb8706c0') {
-      blueToothRXCharacteristic = characteristics[i];
-      console.log('detected second characteristic');
+    for (let i = 0; i < 2; i++) {
+      if (characteristics[i].uuid == 'a5f125c1-7cec-4334-9214-58cffb8706c0') {
+        blueToothTXCharacteristic = characteristics[i];
+        console.log('detected first characteristic');
+      }
+      if (characteristics[i].uuid == 'a5f125c2-7cec-4334-9214-58cffb8706c0') {
+        blueToothRXCharacteristic = characteristics[i];
+        console.log('detected second characteristic');
+      }
     }
-  }
 
-  blueTooth.startNotifications(blueToothRXCharacteristic, gotValue, 'string');
-  isConnected = blueTooth.isConnected();
-  connectButton.hide();
-  showAllParam();
-  sendData("#param");
-  // Add a event handler when the device is disconnected
-  blueTooth.onDisconnected(onDisconnected);
+    blueTooth.startNotifications(blueToothRXCharacteristic, gotValue, 'string');
+    isConnected = blueTooth.isConnected();
+    connectButton.hide();
+    showAllParam();
+    sendData("#param");
+    // Add a event handler when the device is disconnected
+    blueTooth.onDisconnected(onDisconnected);
+  }
 }
 
 
@@ -58,7 +56,7 @@ function gotValue(value) {
     ssidInput.value(splitString[2]);
     connectedSSID = splitString[2];
     ip = splitString[3];
-    if(splitString[4] == 'on'){
+    if (splitString[4] == 'on') {
       AlexaStatusSlider.value(1);
     } else {
       AlexaStatusSlider.value(0);
