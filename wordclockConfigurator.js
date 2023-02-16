@@ -9,7 +9,7 @@ let connectedSSID;
 let wordclocklogoImg;
 let testImg;
 let ip;
-let otaStatus;
+let otaStatus = "off";
 let hueInput;
 let briInput;
 let satInput;

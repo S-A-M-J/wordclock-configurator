@@ -73,5 +73,6 @@ function openTab() {
 
 function activateOTA() {
   sendData("#OTAOn,");
+  otaStatus = "off";
 }
 
