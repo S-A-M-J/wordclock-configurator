@@ -58,8 +58,10 @@ function gotValue(value) {
     ip = splitString[3];
     if (splitString[4] == 'on') {
       AlexaStatusSlider.value(1);
+      alexaStatus = "on";
     } else {
       AlexaStatusSlider.value(0);
+      alexaStatus = "off";
     }
     if (firstConnected) {
       sendData("#param");

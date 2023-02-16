@@ -20,6 +20,7 @@ let wifiConnected = false;
 let falseWifiCredentials = false;
 let firstConnected = true;
 let lastSliderStatus = 0;
+let alexaStatus = "off";
 //let binFileInput;
 
 function preload() {
