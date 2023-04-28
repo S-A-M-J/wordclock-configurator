@@ -89,7 +89,7 @@ function setup() {
   DownloadButton.mousePressed(openTab);
   //**************************************
   ResetButton = createButton('Reset Uhr');
-  ResetButton.position(wordclockImgPosX, 480);
+  ResetButton.position(wordclockImgPosX, 600);
   ResetButton.style('color', color(255));
   ResetButton.style('background-color', color(208, 93, 73));
   ResetButton.mousePressed(resetCommand);
