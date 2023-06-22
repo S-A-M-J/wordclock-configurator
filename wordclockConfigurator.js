@@ -24,7 +24,6 @@ let alexaStatus = "off";
 //let binFileInput;
 
 function preload() {
-  testImg = loadImage('data/trigBoardlogo.png');
   wordclocklogoImg = loadImage('data/wordclockConfLogo.png');
   wordclockImg = loadImage('data/wordclockImg.png');
 }
